@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@1;100;200;300;400;500;600;700;800;900;1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch+Pop&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sofia Sans Condensed', sans-serif;   
+}
+.mainone{
+    width: 100%;
+    height: 100vh;
+    background: url(https://th.bing.com/th/id/OIP.4lGW5d2UgomcUGnDNu8qLQHaFj?rs=1&pid=ImgDetMain);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+#shivab{
+    height:100%;
+    position: absolute;
+    right:0;
+    top:0;
+    opacity: 0.4;
+}
+.bubble{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+}
+.bubble img{
+    width:2em;
+    height: auto;
+    animation: bubble 5s linear infinite;
+    opacity: 0;
+}
+
+@keyframes bubble{
+    0%{
+        opacity: 0;
+        transform: translateY(0);
+    }
+    30%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-70vh);
+    }
+}
+
+.bubble img:nth-child(1){
+    animation-delay: 2s;
+}
+.bubble img:nth-child(2){
+    animation-delay: 1s;
+    width: 105px;
+    height: auto;
+}
+.bubble img:nth-child(3){
+    animation-delay: 3s;
+    width: 75px;
+}
+.bubble img:nth-child(4){
+    animation-delay: 4.5s;
+    width: 90px;
+}
+.bubble img:nth-child(5){
+    animation-delay: 3s;
+    width: 55px;
+}
+.bubble img:nth-child(6){
+    animation-delay: 1s;
+}
+.bubble img:nth-child(7){
+    animation-delay: 7s;
+    width: 120px;
+}
+.bubble img:nth-child(8){
+    animation-delay: 3.5s;
+    width: 80px;
+}
+.bubble img:nth-child(9){
+    animation-delay: 1s;
+    z-index: 4;
+}
+.bubble img:nth-child(10){
+    animation-delay: 5s;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+.hara{
+    width:auto;
+    position:absolute;
+    left:1.5em;
+    top:1em;
+    
+}
+
+.hara h1 {
+  border-right: solid 3px #F8DE22;
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 4em;
+  background: linear-gradient(to top,rgb(255,255,255) 10%,#F8DE22 60%);
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text;
+
+  /* default over write */
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  
+}
+
+/* Animation */
+.hara h1 {
+  animation: animated-text 4s steps(29,end) 1s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 100%;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: #F8DE22;}
+  to{border-right-color: transparent;}
+}
+
+.textarea{
+    background-color: #FFCA03;   
+}
+.history{
+    width:90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+.history div{
+    width:90%;
+    margin-top: 1em;
+}
+.history h1{
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Rubik Glitch Pop', system-ui;
+    padding: 1em 0em;
+}
+.history p{
+    margin:0;
+    text-align: justify;
+}
+.vlz iframe{
+    display: inline-block;
+    float: right;
+    width:25%;
+    border-radius: 5px;
+}
+.vlz p{
+    width: 70%;
+    display: inline-block
+}
+.ktp iframe{
+    display: inline-block;
+    width:25%;
+    border-radius: 5px;
+}
+.ktp p{
+    width: 70%;
+    display: inline-block;
+    float: right;
+}
+.cards{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #FFCA03;
+    padding: 1em 0;
+}
+.card{
+    margin-top: 1.5em;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 10px 22px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.3s ease;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+.carousel-inner{
+    background-color: #FFCA03;
+}
+.carousel-item{
+    margin-top: 1.4em;
+}
+.imgslide{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    /* background-color: #FFCA03; */
+    /* background-color:black; */
+
+}
+
+.box
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: animate 20s linear infinite;
+    margin-top: 5rem;
+    
+}
+@keyframes animate
+{
+      0%
+      {
+        transform: perspective(1000px) rotateY(0deg);
+
+      }
+      100%
+      {
+        transform: perspective(1000px) rotateY(360deg);
+      }
+}
+.box span
+{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height:100%;
+    transform-origin: center;
+    transform-style:preserve-3d;
+    transform:rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+    -webkit-box-reflect:below 0px liner-gradient(transparent,transparent,#0004);
+}
+.box span img
+{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border: 1px solid #F8DE22
+}
+
+#container {
+   margin: auto;
+   filter: url(#threshold) blur(0.6px);
+   
+}
+
+#text1,
+#text2 {
+   position: absolute;
+   width: 100%;
+   display: inline-block;
+   font-family: "Raleway", sans-serif;
+   font-size: 5em;
+   text-align: center;
+   user-select: none;
+   color:#F8DE22;
+}
+.final{
+    height:500px;
+    background-color:#F8DE22;
+}
+#vid{
+    width:100%;
+    height:100%;
+    border: none;
+}
+/* cube animation */
+
+    
+
+.container2 {
+margin-top: 100px;
+perspective: 1000px;
+perspective-origin: 50% 50%;
+}
+   
+.cube {
+width: 200px;
+height: 200px;
+margin: auto;
+position: relative;
+transform-style: preserve-3d;
+animation: move 15s linear infinite;
+
+/*use any animation duration*/
+}
+
+.cube img {
+width: inherit;
+height: 200px;
+position: absolute;
+opacity: 0.9;
+/* border:2px solid yellow; */
+}
+
+.cube img:nth-child(1) {
+transform: rotateY(0deg) translateZ(100px);
+}
+
+.cube img:nth-child(2) {
+transform: rotateY(90deg) translateZ(100px);
+}
+
+.cube img:nth-child(3) {
+transform: rotateY(180deg) translateZ(100px);
+}
+
+.cube img:nth-child(4) {
+transform: rotateY(-90deg) translateZ(100px);
+}
+
+.cube img:nth-child(5) {
+transform: rotateX(90deg) translateZ(100px);
+}
+
+.cube img:nth-child(6) {
+transform: rotateX(-90deg) translateZ(100px);
+}
+
+@keyframes move {
+from {
+transform: rotateX(0deg) rotateY(0deg);
+}
+to {
+transform: rotateX(360deg) rotateY(360deg);
+}
+}
+   
+   
+.end{
+/* background: url(https://wallpapercave.com/dwp2x/wp5005983.jpg); */
+background: url(https://wallpapercave.com/fuwp/uwp4250221.jpeg);
+background-position:right;
+font-weight: bolder;
+font-size:6em;
+text-align: center;
+-webkit-text-fill-color: transparent; 
+-webkit-background-clip: text;
+margin-top: 1em;
+
+}
+
+.links{
+    display: flex;
+    justify-content: space-around;
+    font-size: 2rem;
+    margin-top: 0.3em;
+}
+#insta{
+    color: #DB005B;
+}
+#youtube{
+    color: #FF1700;
+}
+#fb{
+    color: #3081D0;
+}
+#insta:hover,#youtube:hover,#fb:hover{
+    transition: 0.4s;
+    transform: scale(1.1);
+}
+.bottom{
+    margin-top: 1em;
+    font-size: small;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* media -queries */
+
+@media all and (max-width:401px) {
+     .hara h1{
+        font-size: 2rem;
+     }
+     
+     .bubble img:nth-child(4),
+     .bubble img:nth-child(5),
+     .bubble img:nth-child(6),
+     .bubble img:nth-child(7),
+     .bubble img:nth-child(8),
+     .bubble img:nth-child(10){
+        display: none;
+     }
+     #container{
+        margin-top: 1.5em;
+     }
+     #text1,#text2 {
+        font-size: 2.5em;
+     }
+     .final{
+        height: 400px;
+     }
+}
+
+@media all and (max-width:601px) {
+    .hara h1{
+       font-size: 2.5rem;
+    }
+    .bubble img:nth-child(6),
+    .bubble img:nth-child(7),
+    .bubble img:nth-child(8),
+    .bubble img:nth-child(10){
+       display: none;
+    }
+}
